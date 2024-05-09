@@ -4,10 +4,10 @@ Pablo José Pérez Pazos : pablo.perez.pazos@udc.es
 '''
 from sys import argv
 from time import sleep
-from pelicula import Pelicula
+from clase_pelicula import Pelicula
 from clase_pandas import Pandas
 
-tipo = False # Cambiar a 'False' si se quiere cambiar el tipo de lista ordenada
+tipo = False # Cambiar de estado para cambiar el tipo de lista ordenada
 
 if tipo:
     from array_ordered_positional_list import ArrayOrderedPositionalList as ListaOrdenada
