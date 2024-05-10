@@ -1,9 +1,4 @@
-'''
-Nicolás Muñiz Rodríguez : nicolas.muniz@udc.es
-Pablo José Pérez Pazos : pablo.perez.pazos@udc.es
-'''
 from sys import argv
-from time import sleep
 from clase_pelicula import Pelicula
 from clase_pandas import Pandas
 
@@ -125,6 +120,38 @@ class SimuladorPeliculas:
 
                 self.lista_ordenada_sin_repetidos.add(primera)
                 copia_lista.delete(posicion_pelicula)
+    
+    
+    def crear_archivo_sin_repetidos(self) -> None:
+        '''
+        Método que crea un archivo de texto sin películas repetidas a partir de una lista ordenada.
+
+        Returns
+        -------
+        None
+        '''
+        print('  Creando archivo...')
+        
+        if self.lista_ordenada_sin_repetidos.is_empty():
+            self.eliminar_repetidos()
+
+        nombre = str(input('\n  Introduce el nombre que le quieres dar al archivo: '))
+        
+        formato = '.txt'
+        if formato not in nombre:
+            nombre += formato
+        
+        texto_pelicula: str = ''
+        for pelicula in self.lista_ordenada_sin_repetidos:
+            texto_pelicula += f'{pelicula.director}; {pelicula.titulo}; {pelicula.anho_estreno}; {pelicula.puntuacion_media}\n'
+            
+            if pelicula == self.lista_ordenada_sin_repetidos.get_element(self.lista_ordenada_sin_repetidos.last()):
+                texto_pelicula = texto_pelicula[:-1]
+        
+        with open(nombre, 'w', encoding='utf-8') as file: # Creamos un nuevo archivo sin películas repetidas    
+            file.write(texto_pelicula)
+        
+        print('\n  Archivo creado.')
 
     
     def opcion_leer_archivos(self) -> bool:
@@ -227,33 +254,6 @@ class SimuladorPeliculas:
         
         else:
             print('\n  El año introducido debe ser un entero positivo.')
-    
-    
-    def crear_archivo_sin_repetidos(self) -> None:
-        '''
-        Método que crea un archivo de texto sin películas repetidas a partir de una lista ordenada.
-
-        Returns
-        -------
-        None
-        '''
-        print('  Creando archivo...')
-        
-        if self.lista_ordenada_sin_repetidos.is_empty():
-            self.eliminar_repetidos()
-
-        nombre = str(input('\n  Introduce el nombre que le quieres dar al archivo: '))
-        
-        formato = '.txt'
-        if formato not in nombre:
-            nombre += formato
-        
-        with open(nombre, 'w', encoding='utf-8') as file: # Creamos un nuevo archivo sin películas repetidas
-            for pelicula in self.lista_ordenada_sin_repetidos:
-                file.write(f'{pelicula.director}; {pelicula.titulo}; {pelicula.anho_estreno}; {pelicula.puntuacion_media}\n')
-        
-        sleep(0.10)
-        print('\n  Archivo creado.')
 
 
     def mostrar_estadisticas(self) -> None:
