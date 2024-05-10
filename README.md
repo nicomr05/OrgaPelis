@@ -1,2 +1,10 @@
-# OrgaPelis
-Aplicación que permite manejar una lista de películas y ordenarlas según el nombre del director/a, título de la película y año de estreno.
+# OrgaPelis (GAL):
+OrgaPelis é un programa que permite manexar e ordenar (segundo o nome do/a director/a/e, título da película e ano de estreo) unha lista de películas, cuxos datos serán introducidos no programa a través dun arquivo en formato ".txt" ( polo de agora ;) ).
+Debo aclarar que, aínda que unha gran parte do código ven da miña man, os arquivos "array_ordered_positional_list", "linked_ordered_positional_list" e "doubly_linked_base" foron desenvolvidos en 2019 por profesorado da materia Fundamentos de Programación II da Facultade de Informática da Coruña, apoiándose no código de Michael H Goldwasser do libro "Data Structures and Algorithms in Python", 2013. Isto especifícase máis concretamente en cada un dos ficheiros mencionados anteriormente.
+Nun futuro o obxectivo é construír unha Base de Datos na que almacenar a información das películas e extraer os datos.
+
+
+# OrgaPelis (ESP):
+OrgaPelis es un programa que permite manejar y ordenar (según el nombre del/de la director/a/e, título de la película y año de estreno) una lista de películas, cuyos datos serán introducidos en el programa a través de un archivo en formato ".txt" ( por el momento ;) ).
+Debo aclarar que, aunque una gran parte del código viene de mi mano, los archivos "array_ordered_positional_list", "linked_ordered_positional_list" y "doubly_linked_base" fueron desarrollados en 2019 por profesorado de la asignatura Fundamentos de Programación II de la Facultad de Informática de A Coruña, apoyándose en el código de Michael H Goldwasser del libro "Data Structures and Algorithms in Python", 2013. Esto se especifica más concretamente en cada uno de los archivos mencionados anteriormente.
+En un futuro el objetivo es construír una Base de Datos en la que almacenar la información de las películas y extraer los datos.
