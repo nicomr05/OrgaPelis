@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Copyright 2019, Profesorado de Fundamentos de Programación II
-#                 Grado en Ciencia e Ingenería de Datos
+#                 Grao en Ciencia e Enxeñaría de Datos
 #                 Facultade de Informática
 #                 Universidade da Coruña
 #
