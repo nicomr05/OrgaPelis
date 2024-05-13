@@ -36,7 +36,6 @@ class Pelicula:
     __ge__(self, pelicula:'Pelicula') -> bool:
         Implementación del método mágico ">=".
     '''
-    
     def __init__(self, director:str, titulo:str, anho_estreno:int, puntuacion_media:float) -> None:       
         '''
         Método mágico que asigna atributos al objeto.
@@ -87,10 +86,29 @@ class Pelicula:
         -------
         bool
         '''
-        if self.director == pelicula.director and \
-           self.anho_estreno == pelicula.anho_estreno and \
-           self.titulo == pelicula.titulo:
-            return True
+        return (self.director, self.anho_estreno, self.titulo) == (pelicula.director, pelicula.anho_estreno, pelicula.titulo)
+    
+    def __lt__(self, pelicula:'Pelicula') -> bool:
+        '''
+        Implementación del método mágico "<".
+        
+        Parameters
+        ----------
+        pelicula : Pelicula
+         Película sobre la que se quiere comprobar la desigualdad.
+        
+        Returns
+        -------
+        bool
+        '''
+        if self.director != pelicula.director:
+            return self.director < pelicula.director
+        
+        elif self.anho_estreno != pelicula.anho_estreno:
+            return self.anho_estreno < pelicula.anho_estreno
+        
+        elif self.titulo != pelicula.titulo:
+            return self.titulo < pelicula.titulo
         
         return False
     
@@ -115,30 +133,6 @@ class Pelicula:
         
         elif self.titulo != pelicula.titulo:
             return self.titulo > pelicula.titulo
-        
-        return False
-
-    def __lt__(self, pelicula:'Pelicula') -> bool:
-        '''
-        Implementación del método mágico "<".
-        
-        Parameters
-        ----------
-        pelicula : Pelicula
-         Película sobre la que se quiere comprobar la desigualdad.
-        
-        Returns
-        -------
-        bool
-        '''
-        if self.director != pelicula.director:
-            return self.director < pelicula.director
-        
-        elif self.anho_estreno != pelicula.anho_estreno:
-            return self.anho_estreno < pelicula.anho_estreno
-        
-        elif self.titulo != pelicula.titulo:
-            return self.titulo < pelicula.titulo
         
         return False
     
