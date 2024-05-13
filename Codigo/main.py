@@ -57,7 +57,6 @@ class SimuladorPeliculas:
         self._lista_ordenada = ListaOrdenada()
         self._lista_ordenada_sin_repetidos = ListaOrdenada()
         
-    
     def crear_lista_peliculas(self) -> None:
         '''
         Método que permite leer un string de texto con la información de las películas que se quieren ordenar y
@@ -82,7 +81,6 @@ class SimuladorPeliculas:
 
                     self.lista_ordenada.add(pelicula)
                 
-    
     def eliminar_repetidos(self) -> None:
         '''
         Método que elimina las películas repetidas de una lista ordenada.
@@ -121,7 +119,6 @@ class SimuladorPeliculas:
                 self.lista_ordenada_sin_repetidos.add(primera)
                 copia_lista.delete(posicion_pelicula)
     
-    
     def crear_archivo_sin_repetidos(self) -> None:
         '''
         Método que crea un archivo de texto sin películas repetidas a partir de una lista ordenada.
@@ -153,7 +150,6 @@ class SimuladorPeliculas:
         
         print('\n  Archivo creado.')
 
-    
     def opcion_leer_archivos(self) -> bool:
         '''
         Método que permite elegir entre leer o no leer el fichero de texto.
@@ -183,7 +179,6 @@ class SimuladorPeliculas:
             
             else:
                 print(f'\n  Respuesta no válida.\n\n{linea}')
-    
     
     def buscar_director(self, director:str) -> None:
         '''
@@ -217,7 +212,6 @@ class SimuladorPeliculas:
         else:
             print('El director introducido debe ser una cadena de texto no vacía.')
 
-    
     def buscar_anho(self, anho:int) -> None:
         '''
         Función que busca un año en la lista ordenada de directores.
@@ -255,7 +249,6 @@ class SimuladorPeliculas:
         else:
             print('\n  El año introducido debe ser un entero positivo.')
 
-
     def mostrar_estadisticas(self) -> None:
         '''
         Método que muestra por pantalla las estadísticas de las películas de la lista sin repetidos.
@@ -269,7 +262,6 @@ class SimuladorPeliculas:
                 
         datos = Pandas()
         datos.estad_totales(self.lista_ordenada_sin_repetidos)
-
 
     def menu(self) -> None:
         '''
@@ -329,7 +321,7 @@ class SimuladorPeliculas:
 
             elif respuesta not in opciones:
                 print('  La opción no se encuentra en el menú.')
-    
+     
     @property
     def lista_ordenada(self) -> ListaOrdenada:
         return self._lista_ordenada
