@@ -31,11 +31,25 @@ class Pandas:
     '''
     def __init__(self) -> None:
         '''
-        Método que asigna atributos al objeto.
+        Clase que gestiona las estadísticas de las películas y las muestra por pantalla.
 
-        Returns
+        Methods
         -------
-        None
+        __init__(self) -> None:
+            Asigna atributos al objeto.
+
+        estad_totales(self, lista:ListaOrdenada) -> tuple:
+            Recoge los valores de cada película y los añade al dataframe como diccionario.
+            Luego devuelve una tupla con las estadísticas que se solicitaron.
+
+        peliculas_por_director(self) -> None:
+            Cuenta el número de películas por director/a.
+
+        media_director(self) -> None:
+            Realiza la media de la puntuación por director/a.
+
+        media_por_anho(self) -> None:
+            Realiza la media por año de estreno.
         '''
         self._dataframe = pd.DataFrame(columns=['Director', 'Título', 'Fecha', 'Puntuación'])
     

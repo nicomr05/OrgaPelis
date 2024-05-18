@@ -48,11 +48,39 @@ class SimuladorPeliculas:
     '''
     def __init__(self) -> None:
         '''
-        Método que asigna atributos al objeto.
-        
-        Returns
+        Clase del simulador de gestión de películas, que extrae información de un string y la convierte en películas,
+        añadiéndolas a una lista ordenada.
+
+        Methods
         -------
-        None
+        __init__(self) -> None:
+            Asigna atributos al objeto.
+        
+        crear_lista_peliculas(self) -> None:
+            Permite leer un string de texto con la información de las películas que se quieren ordenar y
+            crear una lista ordenada con ellas.
+        
+        eliminar_repetidos(self) -> None:
+            Elimina las películas repetidas de una lista ordenada.
+        
+        opcion_leer_archivos(self) -> bool:
+            Permite elegir entre leer o no leer el fichero de texto.
+        
+        buscar_director(self, director:str) -> None:
+            Busca un director en la lista ordenada de directores.
+        
+        buscar_anho(self, anho:int) -> None:
+            Busca un año en la lista ordenada de directores.
+        
+        crear_archivo_sin_repetidos(self) -> None:
+            Crea un archivo de texto sin películas repetidas a partir de una lista ordenada.    
+        
+        mostrar_estadisticas(self) -> None:
+            Muestra por pantalla las estadísticas de las películas de la lista sin repetidos.
+
+        menu(self) -> None:
+            Imprime por pantalla el menú de opciones para navegar entre las películas y le permite escoger a un usuario
+            entre 3 opciones de visualización/filtrado de la lista, además de la opción de poder salir del menú.
         '''
         self._lista_ordenada = ListaOrdenada()
         self._lista_ordenada_sin_repetidos = ListaOrdenada()

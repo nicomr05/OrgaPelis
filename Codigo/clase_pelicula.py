@@ -8,10 +8,13 @@ class Pelicula:
     ----------
     titulo : str
      Título de la película.
+
     director : str
      Director de la película.
+
     anho_estreno : int
      Año de estreno de la película.
+     
     puntuacion_media : int
      Puntuación media de la película.
 
@@ -38,18 +41,44 @@ class Pelicula:
     '''
     def __init__(self, director:str, titulo:str, anho_estreno:int, puntuacion_media:float) -> None:       
         '''
-        Método mágico que asigna atributos al objeto.
+        Clase abstracta para una película.
+        La clase tiene como atributos el director, título, año de estreno y puntuación media
+        de la película.
 
-        Parameters
+        Attributes
         ----------
         titulo : str
          Título de la película.
+
         director : str
          Director de la película.
+         
         anho_estreno : int
          Año de estreno de la película.
+         
         puntuacion_media : int
          Puntuación media de la película.
+
+        Methods
+        -------
+        __init__(self, director:str, titulo:str, anho_estreno:int, puntuacion_media:float) -> None:
+            Asigna atributos al objeto.
+        
+        __str__(self) -> str:
+            Implementación del método mágico "str".
+            Imprime un string informativo de la película.
+        
+        __eq__(self, pelicula:'Pelicula') -> bool:
+            Implementación del método mágico "==".
+        
+        __gt__(self, pelicula:'Pelicula') -> bool:
+            Implementación del método mágico ">".
+
+        __lt__(self, pelicula:'Pelicula') -> bool:
+            Implementación del método mágico "<".
+
+        __ge__(self, pelicula:'Pelicula') -> bool:
+            Implementación del método mágico ">=".
         '''
         self._director = director
         self._titulo = titulo
