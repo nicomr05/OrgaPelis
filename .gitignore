@@ -1,0 +1,4 @@
+# Archivos ignorados por el repositorio:
+__pycache__/
+*.code-workspace
+*.txt
